@@ -1,5 +1,14 @@
 import PropTypes from 'prop-types'
 
+/*
+ * Header component
+ *
+ * @param {text} string
+ * @param {bgColor} string
+ * @param {textColor} string
+ * @return <header>
+ */
+
 function Header({ text, bgColor, textColor }) {
   const headerStyles = {
     backgroundColor: bgColor,
