@@ -7,6 +7,7 @@ import RatingSelect from './RatingSelect'
 /*
  * Feedback Form component
  *
+ * @param {handleAdd} function
  * @return <form>
  */
 

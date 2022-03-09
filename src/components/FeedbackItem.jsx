@@ -7,6 +7,7 @@ import Card from './shared/Card'
  * Feedback Item component
  *
  * @param {item} object
+ * @param {handleDelete} function
  * @return <Card> component
  */
 

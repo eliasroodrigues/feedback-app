@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 /*
  * Rating Select component
  *
+ * @param {select} number
  * @return <ul> rating select
  */
 
@@ -31,6 +33,10 @@ function RatingSelect({ select }) {
       ))}
     </ul>
   )
+}
+
+RatingSelect.propTypes = {
+  select: PropTypes.number,
 }
 
 export default RatingSelect
