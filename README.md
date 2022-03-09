@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4817864e-c028-4671-90ea-f488bf92f897/deploy-status)](https://app.netlify.com/sites/feedbackuielias/deploys)
 
-[Netfily Site](https://feedbackuielias.netlify.app/)
+[Netlify Site](https://feedbackuielias.netlify.app/)
 
 # Getting Started with Create React App
 
