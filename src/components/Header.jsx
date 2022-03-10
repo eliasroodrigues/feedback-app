@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
  * @param {text} string
  * @param {bgColor} string
  * @param {textColor} string
+ *
  * @return <header>
  */
 

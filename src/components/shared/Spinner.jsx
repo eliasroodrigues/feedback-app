@@ -1,5 +1,11 @@
 import spinner from '../assets/spinner.gif'
 
+/*
+ * Spinner component
+ *
+ * @return <img>
+ */
+
 function Spinner() {
   return <img
     src={spinner}

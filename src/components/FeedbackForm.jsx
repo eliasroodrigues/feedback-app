@@ -8,7 +8,6 @@ import FeedbackContext from '../context/FeedbackContext'
 /*
  * Feedback Form component
  *
- * @param {handleAdd} function
  * @return <form>
  */
 
@@ -18,8 +17,11 @@ function FeedbackForm() {
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
 
-  const { addFeedback, feedbackEdit, updateFeedback } = useContext(FeedbackContext)
+  const { addFeedback, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext)
 
+  // loads the feedback data that is going
+  // to be edited to the form
   useEffect(() => {
     if (feedbackEdit.edit === true) {
       setBtnDisabled(false)
@@ -28,11 +30,13 @@ function FeedbackForm() {
     }
   }, [feedbackEdit])
 
-  const handleTextChange = (event) => {
-    if (text === '') {
+  // verify the text length and manage the
+  // button usage based on it
+  const handleTextChange = ({ target: { value } }) => { // get the value
+    if (value === '') {
       setBtnDisabled(true)
       setMessage(null)
-    } else if (text !== '' && text.trim().length <= 10) {
+    } else if (value.trim().length < 10) {
       setMessage('Text must be at least 10 characters')
       setBtnDisabled(true)
     } else {
@@ -40,9 +44,11 @@ function FeedbackForm() {
       setBtnDisabled(false)
     }
 
-    setText(event.target.value)
+    setText(value)
   }
 
+  // verify if the text length is ok
+  // and them update or create a new feedback
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -58,6 +64,9 @@ function FeedbackForm() {
         addFeedback(newFeedback)
       }
       
+      // reset to default state after submit
+      setBtnDisabled(true)
+      setRating(10)
       setText('')
     }
   }
@@ -66,7 +75,7 @@ function FeedbackForm() {
     <Card>
       <form onSubmit={ handleSubmit }>
         <h2>How would you rate your service with us?</h2>
-        <RatingSelect select={(rating) => setRating(rating)} />
+        <RatingSelect select={ setRating } selected={ rating } />
         <div className='input-group'>
           <input
             onChange={ handleTextChange }
@@ -74,7 +83,9 @@ function FeedbackForm() {
             placeholder='Write a review'
             value={ text }
           />
-          <Button type='submit' isDisabled={ btnDisabled }>Send</Button>
+          <Button type='submit' isDisabled={ btnDisabled }>
+            Send
+          </Button>
         </div>
 
         { message && <div className='message'>{ message }</div> }

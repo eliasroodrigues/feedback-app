@@ -9,8 +9,8 @@ import FeedbackContext from '../context/FeedbackContext'
  * Feedback Item component
  *
  * @param {item} object
- * @param {handleDelete} function
- * @return <Card> component
+ *
+ * @return <Card>
  */
 
 function FeedbackItem({ item }) {
@@ -22,6 +22,7 @@ function FeedbackItem({ item }) {
       <button onClick={() => deleteFeedback(item.id)} className='close'>
         <FaTimes color='purple' />
       </button>
+      
       <button onClick={() => editFeedback(item)} className='edit'>
         <FaEdit color='purple' />
       </button>

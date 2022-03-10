@@ -3,7 +3,16 @@ import { createContext, useState, useEffect } from 'react'
 const FeedbackContext = createContext()
 const PROXY = "http://localhost:5000"
 
+/*
+ * Feefback Context
+ *
+ * @param {children} noe
+ *
+ * @return <Provider>
+ */
+
 export const FeedbackProvider = ({ children }) => {
+  // to show a loading image
   const [isLoading, setIsLoading] = useState(true)
   const [feedback, setFeedback] = useState([])
   // whatever the item we want to update, the bool indicates

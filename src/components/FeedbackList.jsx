@@ -8,7 +8,6 @@ import Spinner from './shared/Spinner'
 /*
  * Feedback List component
  *
- * @param {feedback} array
  * @return <div> <list of FeedbackItem>
  */
 

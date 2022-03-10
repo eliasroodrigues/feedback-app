@@ -5,8 +5,7 @@ import FeedbackContext from '../context/FeedbackContext'
 /*
  * Feedback Stats component
  *
- * @param {feedback} array
- * @return <div> average
+ * @return <div>
  */
 
 function FeedbackStats() {

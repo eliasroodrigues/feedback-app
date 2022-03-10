@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 /*
  * Button component
  *
- * @param {children} wherever the buttons is wrapped
- * @param {version} button style(primary, secondary, etc)
- * @param {type} button type(submit)
+ * @param {children} node
+ * @param {version} string
+ * @param {type} string
  * @param {isDisabled} bool
  *
- * @return App
+ * @return <button>
  */
 
 function Button({ children, version, type, isDisabled }) {
