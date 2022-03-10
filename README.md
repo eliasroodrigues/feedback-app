@@ -12,7 +12,7 @@ This is a project made during a React course.
 
 # Install in your machine
 
->> git clone the repo
->> cd folder
->> npm install
->> npm run dev
+- git clone the repo
+- cd folder
+- npm install
+- npm run dev
