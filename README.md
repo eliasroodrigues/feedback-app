@@ -9,6 +9,7 @@ This is a project made during a React course.
 # Link
 
 [Netlify Site](https://feedbackuielias.netlify.app/)
+NOTE: version without json-server
 
 # Install in your machine
 
